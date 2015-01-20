@@ -9,6 +9,8 @@
 //   }
 // });
 
-// function tester(){
-// document.getElementById('test').innerHTML = "SHIT";
-// }
+
+
+$(document).ready(function(){
+  $(test).innerHTML = "SHIT WORKS";
+});
