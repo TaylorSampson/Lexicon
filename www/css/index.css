@@ -158,9 +158,16 @@
 }
 
 @font-face{
+  font-family: Raleway-m;
+  src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face{
   font-family: Lato;
   src: url(../fonts/Lato-Regular.ttf);
 }
+
+
 
  body {
    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -331,4 +338,19 @@ p{
 
 .left{
   margin-left:0px;
+}
+
+#WOTD{
+  font-family:Raleway-m;
+  font-size:20px;
+  color:#ff5454;
+  padding-top:1%;
+}
+
+#contents{
+  padding-top:2%;
+}
+
+#title, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
+  opacity:0;
 }

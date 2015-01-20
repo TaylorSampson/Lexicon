@@ -12,5 +12,10 @@
 
 
 $(document).ready(function(){
-  $(test).innerHTML = "SHIT WORKS";
+  $("#contents").html("poop");
+  $("#title").animate({opacity:'1'}, 'slow');
+});
+
+$('button').click(function(){
+  $("#contents").html("pee")
 });
