@@ -1,0 +1,344 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ /* {
+ -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+ /* Smartphones (portrait and landscape) ----------- */
+
+
+ @media only screen
+ and (min-device-width : 319px)
+ and (max-device-height: 480px)
+ and (max-device-width : 480px) {
+   /* Styles */
+   div#container{
+     margin-top:35%;
+     }
+     div nav h1 {
+       font-size: 25px;
+       margin-top:20%;
+     }
+     }
+
+ /* Smartphones (landscape) ----------- */
+ @media only screen
+ and (min-width : 319px) {
+   /* Styles */
+   div#container{
+     margin-top:25%;
+   }
+   div nav h1 {
+     font-size: 25px;
+     margin-top:0%;
+   }
+ }
+
+ /* Smartphones (portrait) ----------- */
+ @media only screen
+ and (max-width : 319px) {
+   /* Styles */
+   div#container{
+     margin-top:35%;
+   }
+   div nav h1 {
+     font-size: 25px;
+     margin-top:0%;
+   }
+ }
+
+/*Iphone 5*/
+ @media only screen
+ and (min-width : 319px)
+ and (max-width : 568px){
+
+   div#container{
+     margin-top:38%;
+   }
+   div nav h1 {
+     font-size: 35px;
+     margin-top:8%;
+   }
+
+ }
+/*Iphone 6*/
+ @media only screen
+ and (min-width : 375px)
+ and (max-width : 667px){
+   div nav h1 {
+     font-size: 47px;
+   }
+ }
+
+ /* iPads (portrait and landscape) ----------- */
+ @media only screen
+ and (min-device-width : 767px)
+ and (max-device-width : 1199px) {
+   /* Styles */
+   div#container{
+     margin-top:15%;
+   }
+   div nav h1 {
+     font-size: 50px;
+   }
+
+ }
+
+ /* iPads (landscape) ----------- */
+ @media only screen
+ and (min-device-width : 767px)
+ and (max-device-width : 1199px)
+ and (orientation : landscape) {
+   /* Styles */
+   div#container{
+     margin-top:18%;
+   }
+   div nav h1 {
+     font-size: 50px;
+   }
+ }
+
+ /* iPads (portrait) ----------- */
+ @media only screen
+ and (min-device-width : 767px)
+ and (max-device-width : 1199px)
+ and (orientation : portrait) {
+   /* Styles */
+   div#container{
+     margin-top:20%;
+   }
+   div nav h1{
+     font-size:50px;
+   }
+ }
+
+ /* Desktops and laptops ----------- */
+ @media only screen
+ and (min-width : 1200px) {
+   /* Styles */
+   div#container{
+     margin-top:15%;
+   }
+   div nav h1 {
+     font-size: 50px;
+     margin-top:0%;
+   }
+ }
+
+ /* Large screens ----------- */
+ @media only screen
+ and (min-width : 1824px) {
+   /* Styles */
+   div#container{
+     margin-top:15%;
+   }
+   div nav h1 {
+     font-size: 80px;
+     margin-top:3%;
+   }
+ }
+@font-face{
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face{
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+ body {
+   -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+   -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+   -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+   background-color:#f0f0f0;
+   font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+   font-size:12px;
+   height:100%;
+   margin:0px;
+   padding:0px;
+   width:100%;
+ }
+
+p{
+  width: 100%;
+  text-align:center;
+  margin:auto;
+}
+ /* Landscape layout (with min-width) */
+ @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+   .app {
+     background-position:left center;
+     padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+     margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+     /* offset horizontal: half of image width and text area width */
+   }
+ }
+
+ h1 {
+   font-size:24px;
+   font-weight:normal;
+   margin:0px;
+   overflow:visible;
+   padding:0px;
+   text-align:center;
+ }
+
+ .event {
+   border-radius:4px;
+   -webkit-border-radius:4px;
+   color:#FFFFFF;
+   font-size:12px;
+   margin:0px 30px;
+   padding:2px 0px;
+ }
+
+ .event.listening {
+   background-color:#333333;
+   display:block;
+ }
+
+ .event.received {
+   background-color:#4B946A;
+   display:none;
+ }
+
+ @keyframes fade {
+   from { opacity: 1.0; }
+   50% { opacity: 0.4; }
+   to { opacity: 1.0; }
+ }
+
+ @-webkit-keyframes fade {
+   from { opacity: 1.0; }
+   50% { opacity: 0.4; }
+   to { opacity: 1.0; }
+ }
+
+ .blink {
+   animation:fade 3000ms infinite;
+   -webkit-animation:fade 3000ms infinite;
+ }
+
+ #title{
+   font-family:Raleway;
+   color: #ffffff;
+   padding-top:2%;
+   margin-bottom:-5%;
+   text-align: center;
+   text-transform: lowercase;
+   /*text-shadow: -2px 2px 1px #656565;*/
+   text-shadow: rgb(186, 78, 78) 1px 1px,
+   rgb(186, 78, 78) 1px 1px,
+   rgb(186, 78, 78) 2px 2px,
+   rgb(186, 78, 78) 3px 3px,
+   rgb(186, 78, 78) 4px 4px,
+   rgb(186, 78, 78) 5px 5px,
+   rgb(186, 78, 78) 6px 6px,
+   rgb(186, 78, 78) 7px 7px,
+   rgb(186, 78, 78) 8px 8px,
+   rgb(186, 78, 78) 9px 9px,
+   rgb(186, 78, 78) 10px 10px,
+   rgb(186, 78, 78) 11px 11px,
+   rgb(186, 78, 78) 12px 12px,
+   rgb(186, 78, 78) 13px 13px,
+   rgb(186, 78, 78) 14px 14px,
+   rgb(186, 78, 78) 15px 15px,
+   rgb(186, 78, 78) 16px 16px,
+   rgb(186, 78, 78) 17px 17px,
+   rgb(186, 78, 78) 18px 18px,
+   rgb(186, 78, 78) 19px 19px,
+   rgb(186, 78, 78) 20px 20px,
+   rgb(186, 78, 78) 21px 21px,
+   rgb(186, 78, 78) 22px 22px,
+   rgb(186, 78, 78) 23px 23px,
+   rgb(186, 78, 78) 24px 24px,
+   rgb(186, 78, 78) 25px 25px,
+   rgb(186, 78, 78) 26px 26px,
+   rgb(186, 78, 78) 27px 27px,
+   rgb(186, 78, 78) 28px 28px,
+   rgb(186, 78, 78) 29px 29px,
+   rgb(186, 78, 78) 30px 30px;
+ }
+
+
+ /*
+ text-shadow: rgb(186, 78, 78) 1px 1px,
+ rgb(186, 78, 78) 1px 1px,
+ rgb(186, 78, 78) 2px 2px,
+ rgb(186, 78, 78) 3px 3px,
+ rgb(186, 78, 78) 4px 4px,
+ rgb(186, 78, 78) 5px 5px,
+ rgb(186, 78, 78) 6px 6px,
+ rgb(186, 78, 78) 7px 7px,
+ rgb(186, 78, 78) 8px 8px,
+ rgb(186, 78, 78) 9px 9px,
+ rgb(186, 78, 78) 10px 10px,
+ rgb(186, 78, 78) 11px 11px,
+ rgb(186, 78, 78) 12px 12px,
+ rgb(186, 78, 78) 13px 13px,
+ rgb(186, 78, 78) 14px 14px,
+ rgb(186, 78, 78) 15px 15px,
+ rgb(186, 78, 78) 16px 16px,
+ rgb(186, 78, 78) 17px 17px,
+ rgb(186, 78, 78) 18px 18px,
+ rgb(186, 78, 78) 19px 19px,
+ rgb(186, 78, 78) 20px 20px,
+ rgb(186, 78, 78) 21px 21px,
+ rgb(186, 78, 78) 22px 22px,
+ rgb(186, 78, 78) 23px 23px,
+ rgb(186, 78, 78) 24px 24px,
+ rgb(186, 78, 78) 25px 25px,
+ rgb(186, 78, 78) 26px 26px,
+ rgb(186, 78, 78) 27px 27px,
+ rgb(186, 78, 78) 28px 28px,
+ rgb(186, 78, 78) 29px 29px,
+ rgb(186, 78, 78) 30px 30px;
+
+}*/
+
+ #headcontainer{
+   background-color:#ff5454;
+   margin:auto;
+ }
+
+ #container{
+   background-color:#ffffff;
+   box-shadow:2px 2px 1px #cecece;
+   width:75%;
+   text-align:center;
+   margin:auto;
+   border: 1px solid #e7e7e7;
+   margin-top:25%;
+ }
+
+ #innertitle{
+   border-bottom: 1px solid #e7e7e7;
+ }
+
+.navbar{
+  height:17% !important;
+}
+
+.center{
+  margin:auto;
+}
+
+.left{
+  margin-left:0px;
+}
