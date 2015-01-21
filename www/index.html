@@ -31,7 +31,7 @@
         </head>
     <body>
 
-      <div class="page-container">
+      <div id="page-container">
         <nav class="navbar navbar-default navbar-fixed-top" id="headcontainer">
           <div id="maintitle">
             <h1 id="title">Lexicon</h1>
@@ -42,26 +42,21 @@
         <div id="innertitle">
           <p id= "WOTD"></p>
         </div>
+        <div id="origin">origin:</div>
         <div id="note"></div>
+        <div id="tag1">definition:</div>
         <div id="defpos"></div>
         <div id="def"></div>
+        <div id="tag2">definition:</div>
         <div id="defpos2"></div>
         <div id="def2"></div>
+        <div id="example">example:</div>
         <div id="ex"></div>
-
       </div>
+      <p id="bottom">
 
-      <div id="container">
-        <div id="innertitle">
-          <p id= "WOTD">
-            Word Of The Day
-          </p>
-        </div>
-        <p class="result">
-          asdfasdfasdf
-        </p>
-      </div>
-
+      </p>
+    </div>
       <script>
       (function() {
         var flickerAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";

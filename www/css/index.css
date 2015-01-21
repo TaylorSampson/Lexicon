@@ -209,7 +209,7 @@ p{
  .event {
    border-radius:4px;
    -webkit-border-radius:4px;
-   color:#FFFFFF;
+   color:#eeeeee;
    font-size:12px;
    margin:0px 30px;
    padding:2px 0px;
@@ -299,6 +299,10 @@ p{
 
 }*/
 
+#page-container{
+  background-color:#f0f0f0;
+}
+
 /*NAVBAR BACKGROUND*/
  #headcontainer{
    background-color:#ff5454;
@@ -312,19 +316,21 @@ p{
    width:75%;
    text-align:center;
    margin:auto;
-   border: 1px solid #e7e7e7;
+   /*border: 1px solid #e7e7e7;*/
    margin-top:25%;
  }
 
 /*TITLE SPACE IN CARD*/
  #innertitle{
    border-bottom: 1px solid #e7e7e7;
+   background-color: #989898;
  }
 
 
 .navbar{
-  height:17% !important;
+  height:17%;
 }
+
 
 .center{
   margin:auto;
@@ -336,11 +342,11 @@ p{
 
 /*TITLE TEXT IN CARD*/
 #WOTD{
-  font-family:Raleway-m;
+  font-family:Raleway;
   font-size:20px;
-  color:#ff5454;
-  padding-top:1%;
-  text-transform:uppercase;
+  color:#ffffff;
+  padding-top:3%;
+  text-transform:lowercase;
 }
 
 
@@ -351,3 +357,91 @@ p{
 }
 
 /*RETURNED VALUES FROM API*/
+#note{
+/*padding-top: 7%;*/
+margin-left: 7%;
+margin-right: 7%;
+padding-bottom: 4%;
+color:#656565;
+border-bottom: 1px solid #ffcaca;
+font-style:italic;
+}
+
+#defpos{
+ color: #ff5454;
+ font-style: italic;
+ font-weight: 600;
+ text-align:left;
+ padding-left:8%;
+}
+
+#defpos2{
+  color: #ff5454;
+  font-style: italic;
+  text-align:left;
+  font-weight:600;
+  padding-left:8%;
+}
+
+#def{
+  text-align:justify;
+  margin-left: 7%;
+  margin-right: 7%;
+  border-bottom: 1px dotted #e7e7e7;
+  color:#656565;
+  padding-bottom:4%;
+  }
+
+#def2{
+  text-align:justify;
+  margin-left: 7%;
+  margin-right: 7%;
+  border-bottom: 1px solid #ffcaca;
+  color:#656565;
+  padding-bottom:4%;
+}
+
+#ex{
+  margin-left: 7%;
+  margin-right: 7%;
+  padding-top:1%;
+  padding-bottom:4%;
+  text-align:justify;
+  font-style: italic;
+}
+
+#tag1{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;}
+
+#tag2{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;
+}
+ #origin{
+   text-transform:uppercase;
+   font-size:12px;
+   padding-top:4%;
+   color:#989898;
+   padding-bottom:1%;
+ }
+
+ #example{
+   text-transform:uppercase;
+   font-size:12px;
+   padding-top:5%;
+   color:#989898;
+ }
+
+html {
+  background-color:#f0f0f0;
+}
+
+#bottom{
+  height:40px;
+  background-color:#f0f0f0;
+}

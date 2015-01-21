@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="js/jquery.js"></script>
+</head>
+<body>
+
+<div id="images"></div>
+<div>
+
+</div>
+<script>
+(function() {
+  var flickerAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+  $.getJSON( flickerAPI, function(returneddata) {
+    document.write(returneddata.word);
+    document.write(returneddata.note);
+    document.write(returneddata.examples[0].text);
+    document.write(returneddata.definitions[0].text);
+    document.write(returneddata.definitions[0].partOfSpeech);
+    document.write(returneddata.definitions[1].text);
+    document.write(returneddata.definitions[1].partOfSpeech);
+
+  });
+    // .done(function( data ) {
+    //   $.each( data.items, function( i, item ) {
+    //     $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+    //     if ( i === 3 ) {
+    //       return false;
+    //     }
+    //   });
+    // });
+})();
+</script>
+
+
+
+</body>
+</html>
