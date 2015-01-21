@@ -260,17 +260,7 @@ p{
    rgb(186, 78, 78) 7px 7px,
    rgb(186, 78, 78) 8px 8px,
    rgb(186, 78, 78) 9px 9px,
-   rgb(186, 78, 78) 10px 10px,
-   rgb(186, 78, 78) 11px 11px,
-   rgb(186, 78, 78) 12px 12px,
-   rgb(186, 78, 78) 13px 13px,
-   rgb(186, 78, 78) 14px 14px,
-   rgb(186, 78, 78) 15px 15px,
-   rgb(186, 78, 78) 16px 16px,
-   rgb(186, 78, 78) 17px 17px,
-   rgb(186, 78, 78) 18px 18px,
-   rgb(186, 78, 78) 19px 19px,
-   rgb(186, 78, 78) 20px 20px;
+   rgb(186, 78, 78) 10px 10px;
  }
 
 
@@ -309,11 +299,13 @@ p{
 
 }*/
 
+/*NAVBAR BACKGROUND*/
  #headcontainer{
    background-color:#ff5454;
    margin:auto;
  }
 
+/*CARD ATTRIBUTES*/
  #container{
    background-color:#ffffff;
    box-shadow:2px 2px 1px #cecece;
@@ -324,9 +316,11 @@ p{
    margin-top:25%;
  }
 
+/*TITLE SPACE IN CARD*/
  #innertitle{
    border-bottom: 1px solid #e7e7e7;
  }
+
 
 .navbar{
   height:17% !important;
@@ -340,17 +334,20 @@ p{
   margin-left:0px;
 }
 
+/*TITLE TEXT IN CARD*/
 #WOTD{
   font-family:Raleway-m;
   font-size:20px;
   color:#ff5454;
   padding-top:1%;
+  text-transform:uppercase;
 }
 
-#contents{
-  padding-top:2%;
-}
+
+
 
 #title, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
   opacity:0;
 }
+
+/*RETURNED VALUES FROM API*/

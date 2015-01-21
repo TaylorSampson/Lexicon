@@ -1,5 +1,5 @@
 // var client = require("swagger-client")
-//
+// client.authorizations.add("apiKey", new client.ApiKeyAuthorization("api_key","special-key","query"));
 // var swagger = new client.SwaggerApi({
 //   url: 'http://petstore.swagger.wordnik.com/api/api-docs',
 //   success: function() {
@@ -9,6 +9,13 @@
 //   }
 // });
 
-// function tester(){
-// document.getElementById('test').innerHTML = "SHIT";
-// }
+
+
+$(document).ready(function(){
+  $("#contents").html("poop");
+  $("#title").animate({opacity:'1'}, 'slow');
+});
+
+$('button').click(function(){
+  $("#contents").html("pee")
+});

@@ -158,9 +158,16 @@
 }
 
 @font-face{
+  font-family: Raleway-m;
+  src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face{
   font-family: Lato;
   src: url(../fonts/Lato-Regular.ttf);
 }
+
+
 
  body {
    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -253,27 +260,7 @@ p{
    rgb(186, 78, 78) 7px 7px,
    rgb(186, 78, 78) 8px 8px,
    rgb(186, 78, 78) 9px 9px,
-   rgb(186, 78, 78) 10px 10px,
-   rgb(186, 78, 78) 11px 11px,
-   rgb(186, 78, 78) 12px 12px,
-   rgb(186, 78, 78) 13px 13px,
-   rgb(186, 78, 78) 14px 14px,
-   rgb(186, 78, 78) 15px 15px,
-   rgb(186, 78, 78) 16px 16px,
-   rgb(186, 78, 78) 17px 17px,
-   rgb(186, 78, 78) 18px 18px,
-   rgb(186, 78, 78) 19px 19px,
-   rgb(186, 78, 78) 20px 20px,
-   rgb(186, 78, 78) 21px 21px,
-   rgb(186, 78, 78) 22px 22px,
-   rgb(186, 78, 78) 23px 23px,
-   rgb(186, 78, 78) 24px 24px,
-   rgb(186, 78, 78) 25px 25px,
-   rgb(186, 78, 78) 26px 26px,
-   rgb(186, 78, 78) 27px 27px,
-   rgb(186, 78, 78) 28px 28px,
-   rgb(186, 78, 78) 29px 29px,
-   rgb(186, 78, 78) 30px 30px;
+   rgb(186, 78, 78) 10px 10px;
  }
 
 
@@ -341,4 +328,19 @@ p{
 
 .left{
   margin-left:0px;
+}
+
+#WOTD{
+  font-family:Raleway-m;
+  font-size:20px;
+  color:#ff5454;
+  padding-top:1%;
+}
+
+#contents{
+  padding-top:2%;
+}
+
+#title, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
+  opacity:0;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
+
+    <!-- Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
     distributed with this work for additional information
     regarding copyright ownership.  The ASF licenses this file
@@ -26,6 +26,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+
         </head>
     <body>
 
@@ -38,17 +40,44 @@
 
       <div id="container">
         <div id="innertitle">
+          <p id= "WOTD"></p>
+        </div>
+        <div id="note"></div>
+        <div id="defpos"></div>
+        <div id="def"></div>
+        <div id="defpos2"></div>
+        <div id="def2"></div>
+        <div id="ex"></div>
+
+      </div>
+
+      <div id="container">
+        <div id="innertitle">
           <p id= "WOTD">
             Word Of The Day
           </p>
         </div>
-        <p id="contents">
+        <p class="result">
           asdfasdfasdf
         </p>
-        <button name="button"></button>
       </div>
-    </div>
-        <script src="js/jquery.js"></script>
+
+      <script>
+      (function() {
+        var flickerAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+        $.getJSON( flickerAPI, function(returneddata) {
+          $('#WOTD').html(returneddata.word);
+          $('#note').append(returneddata.note);
+          $('#defpos').append(returneddata.definitions[0].partOfSpeech);
+          $('#def').append(returneddata.definitions[0].text);
+          $('#defpos2').append(returneddata.definitions[1].partOfSpeech);
+          $('#def2').append(returneddata.definitions[1].text);
+          $('#ex').append(returneddata.examples[0].text);
+        });
+      })();
+      </script>
+
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
