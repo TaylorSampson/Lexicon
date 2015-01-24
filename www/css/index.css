@@ -22,67 +22,66 @@
  /* Smartphones (portrait and landscape) ----------- */
 
 
- @media only screen
- and (min-device-width : 319px)
- and (max-device-height: 480px)
- and (max-device-width : 480px) {
-   /* Styles */
-   div#container{
-     margin-top:35%;
+
+/*Iphone4*/
+ @media screen and (device-aspect-ratio: 2/3) {
+
+     /* Styles */
+
+
+     div#container{
+       margin-top:35%;
      }
+
+     #headcontainer{
+       height:90px;
+      }
      div nav h1 {
-       font-size: 25px;
-       margin-top:20%;
-     }
+       font-size: 39px;
+       margin-top:3%;
      }
 
- /* Smartphones (landscape) ----------- */
- @media only screen
- and (min-width : 319px) {
-   /* Styles */
-   div#container{
-     margin-top:25%;
-   }
-   div nav h1 {
-     font-size: 25px;
-     margin-top:0%;
-   }
- }
-
- /* Smartphones (portrait) ----------- */
- @media only screen
- and (max-width : 319px) {
-   /* Styles */
-   div#container{
-     margin-top:35%;
-   }
-   div nav h1 {
-     font-size: 25px;
-     margin-top:0%;
-   }
+     h1#titledef{
+       padding-top:4%;
+     }
  }
 
 /*Iphone 5*/
- @media only screen
- and (min-width : 319px)
- and (max-width : 568px){
+ @media screen and (device-aspect-ratio: 40/71){
+
 
    div#container{
-     margin-top:38%;
+     margin-top:38% !important;
    }
    div nav h1 {
      font-size: 35px;
      margin-top:8%;
    }
 
+   #divdefinput{
+     margin-top: 28% !important;
+   }
+
+   h1#titledef{
+     font-size:40px;
+     margin-top:6%;
+   }
+
  }
+
 /*Iphone 6*/
  @media only screen
  and (min-width : 375px)
  and (max-width : 667px){
    div nav h1 {
      font-size: 47px;
+     margin-top:6%;
    }
+
+   #divdefinput{
+     margin-top:30% !important;
+   }
+
  }
 
  /* iPads (portrait and landscape) ----------- */
@@ -96,6 +95,11 @@
    div nav h1 {
      font-size: 50px;
    }
+
+   #divdefinput{
+     margin-top:14% !important;
+   }
+
 
  }
 
@@ -152,6 +156,14 @@
      margin-top:3%;
    }
  }
+
+/*END OF MEDIA QUERIES */
+
+
+
+
+
+/*FONT IMPORTS*/
 @font-face{
   font-family: Raleway;
   src: url(../fonts/Raleway-Regular.ttf);
@@ -169,6 +181,10 @@
 
 
 
+
+
+
+/*START OF PAGE CSS*/
  body {
    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -207,8 +223,8 @@ p{
  }
 
  .event {
-   border-radius:4px;
-   -webkit-border-radius:4px;
+   border-radius:0px;
+   -webkit-border-radius:0px;
    color:#eeeeee;
    font-size:12px;
    margin:0px 30px;
@@ -242,6 +258,11 @@ p{
    -webkit-animation:fade 3000ms infinite;
  }
 
+
+
+
+
+/*START OF CUSTOM CSS*/
  #title{
    font-family:Raleway;
    color: #ffffff;
@@ -250,81 +271,44 @@ p{
    text-align: center;
    text-transform: lowercase;
    /*text-shadow: -2px 2px 1px #656565;*/
-   text-shadow: rgb(186, 78, 78) 1px 1px,
-   rgb(186, 78, 78) 1px 1px,
-   rgb(186, 78, 78) 2px 2px,
-   rgb(186, 78, 78) 3px 3px,
-   rgb(186, 78, 78) 4px 4px,
-   rgb(186, 78, 78) 5px 5px,
-   rgb(186, 78, 78) 6px 6px,
-   rgb(186, 78, 78) 7px 7px,
-   rgb(186, 78, 78) 8px 8px,
-   rgb(186, 78, 78) 9px 9px,
-   rgb(186, 78, 78) 10px 10px;
- }
+}
 
 
- /*
- text-shadow: rgb(186, 78, 78) 1px 1px,
- rgb(186, 78, 78) 1px 1px,
- rgb(186, 78, 78) 2px 2px,
- rgb(186, 78, 78) 3px 3px,
- rgb(186, 78, 78) 4px 4px,
- rgb(186, 78, 78) 5px 5px,
- rgb(186, 78, 78) 6px 6px,
- rgb(186, 78, 78) 7px 7px,
- rgb(186, 78, 78) 8px 8px,
- rgb(186, 78, 78) 9px 9px,
- rgb(186, 78, 78) 10px 10px,
- rgb(186, 78, 78) 11px 11px,
- rgb(186, 78, 78) 12px 12px,
- rgb(186, 78, 78) 13px 13px,
- rgb(186, 78, 78) 14px 14px,
- rgb(186, 78, 78) 15px 15px,
- rgb(186, 78, 78) 16px 16px,
- rgb(186, 78, 78) 17px 17px,
- rgb(186, 78, 78) 18px 18px,
- rgb(186, 78, 78) 19px 19px,
- rgb(186, 78, 78) 20px 20px,
- rgb(186, 78, 78) 21px 21px,
- rgb(186, 78, 78) 22px 22px,
- rgb(186, 78, 78) 23px 23px,
- rgb(186, 78, 78) 24px 24px,
- rgb(186, 78, 78) 25px 25px,
- rgb(186, 78, 78) 26px 26px,
- rgb(186, 78, 78) 27px 27px,
- rgb(186, 78, 78) 28px 28px,
- rgb(186, 78, 78) 29px 29px,
- rgb(186, 78, 78) 30px 30px;
-
-}*/
-
+/*TOTAL PAGE CSS*/
 #page-container{
   background-color:#f0f0f0;
 }
+
+
 
 /*NAVBAR BACKGROUND*/
  #headcontainer{
    background-color:#ff5454;
    margin:auto;
+   border:none;
  }
+
+
 
 /*CARD ATTRIBUTES*/
  #container{
    background-color:#ffffff;
    box-shadow:2px 2px 1px #cecece;
-   width:75%;
+   width:85%;
    text-align:center;
    margin:auto;
    /*border: 1px solid #e7e7e7;*/
-   margin-top:25%;
+   margin-top:35%;
  }
+
+
 
 /*TITLE SPACE IN CARD*/
  #innertitle{
    border-bottom: 1px solid #e7e7e7;
-   background-color: #989898;
+   background-color: #aeaeae;
  }
+
 
 
 .navbar{
@@ -339,6 +323,7 @@ p{
 .left{
   margin-left:0px;
 }
+
 
 /*TITLE TEXT IN CARD*/
 #WOTD{
@@ -437,11 +422,196 @@ font-style:italic;
    color:#989898;
  }
 
+#wotdPronounce{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;
+}
+
 html {
   background-color:#f0f0f0;
 }
 
-#bottom{
-  height:40px;
+.bottom{
+  height:40px !important;
   background-color:#f0f0f0;
+}
+
+
+/*CSS FOR DEFINITION SEARCH*/
+
+#wordreturn{
+  font-family:Raleway;
+  font-size:20px;
+  color:#ffffff;
+  padding-top:3%;
+  text-transform:lowercase;
+}
+
+#prons{
+  color: #ff5454;
+  font-style: italic;
+  text-align:left;
+  font-weight:600;
+  padding-left:8%;
+}
+
+#partspeech{
+  color: #ff5454;
+  font-style: italic;
+  text-align:left;
+  font-weight:600;
+  padding-left:8%;
+}
+
+#defreturn{
+  text-align:justify;
+  margin-left: 7%;
+  margin-right: 7%;
+  color:#656565;
+  padding-bottom:4%;
+}
+
+#titledef{
+  font-family:Raleway;
+  color: #ffffff;
+  padding-top:2%;
+  margin-bottom:-5%;
+  text-align: center;
+  text-transform: lowercase;
+  /*text-shadow: -2px 2px 1px #656565;*/
+
+}
+
+#maintitledef{
+
+}
+
+.navbardef{
+
+  height:20%;
+}
+
+#definput{
+margin:auto;
+text-align:center;
+width:100%;
+background-color:#44a8a8;
+color:white;
+border:none;
+height:50px;
+font-size:20px;
+font-family:Raleway;
+bottom:0;
+margin-top:0%;
+}
+
+#tagdef1{
+text-transform:uppercase;
+font-size:12px;
+padding-top:5%;
+color:#989898;
+
+}
+
+#tagdef2{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;
+
+}
+
+#partspeech2{
+  color: #ff5454;
+  font-style: italic;
+  text-align:left;
+  font-weight:600;
+  padding-left:8%;
+}
+
+#defreturn2{
+  text-align:justify;
+  margin-left: 7%;
+  margin-right: 7%;
+  color:#656565;
+  padding-bottom:4%;
+}
+
+
+#tagdef3{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;
+
+}
+
+#partspeech3{
+  color: #ff5454;
+  font-style: italic;
+  text-align:left;
+  font-weight:600;
+  padding-left:8%;
+}
+
+#defreturn3{
+  text-align:justify;
+  margin-left: 7%;
+  margin-right: 7%;
+  color:#656565;
+  padding-bottom:4%;
+}
+
+#containerdef{
+  background-color:#ffffff;
+  box-shadow:2px 2px 1px #cecece;
+  width:85%;
+  text-align:center;
+  margin:auto;
+  margin-top:3%;
+  visibility: hidden;
+}
+
+#divdefinput{
+  margin-top:28%;
+  text-align:center;
+}
+
+#btndefsearch{
+  text-align:center;
+  margin-bottom:10%;
+}
+
+#deftotaldev{
+  background-color:#f0f0f0;
+}
+
+#buttonreq{
+width:100%;
+background-color:#95eb95;
+border:none;
+height:40px;
+width:auto:
+position:relative;
+font-family: Raleway-m;
+color: #ffffff
+
+}
+
+#mag{
+  font-size:20px;
+}
+
+#back{
+  bottom:0;
+  right:50%;
+}
+
+#dictPronounce{
+  text-transform:uppercase;
+  font-size:12px;
+  padding-top:5%;
+  color:#989898;
 }

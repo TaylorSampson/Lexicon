@@ -27,6 +27,8 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
 
         </head>
     <body>
@@ -52,15 +54,19 @@
         <div id="def2"></div>
         <div id="example">example:</div>
         <div id="ex"></div>
+        <form action="test.html">
+          <input type="submit" value="a">
+        </form>
       </div>
-      <p id="bottom">
-
-      </p>
+      <span class="bottom">
+          <br>
+          <br>
+      </span>
     </div>
       <script>
       (function() {
-        var flickerAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
-        $.getJSON( flickerAPI, function(returneddata) {
+        var wotdAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+        $.getJSON( wotdAPI, function(returneddata) {
           $('#WOTD').html(returneddata.word);
           $('#note').append(returneddata.note);
           $('#defpos').append(returneddata.definitions[0].partOfSpeech);
@@ -71,6 +77,8 @@
         });
       })();
       </script>
+
+
 
 
         <script type="text/javascript" src="cordova.js"></script>

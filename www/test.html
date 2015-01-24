@@ -1,47 +1,90 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<!-- Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>jQuery.getJSON demo</title>
-  <style>
-  img {
-    height: 100px;
-    float: left;
-  }
-  </style>
-  <script src="js/jquery.js"></script>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+
 </head>
 <body>
 
-<div id="images"></div>
-<div>
+  <div id="page-container">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-def" id="headcontainer">
+      <div id="maintitledef">
+        <h1 id="titledef">Lexicon</h1>
+      </div>
+    </nav>
 
-</div>
-<script>
-(function() {
-  var flickerAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
-  $.getJSON( flickerAPI, function(returneddata) {
-    document.write(returneddata.word);
-    document.write(returneddata.note);
-    document.write(returneddata.examples[0].text);
-    document.write(returneddata.definitions[0].text);
-    document.write(returneddata.definitions[0].partOfSpeech);
-    document.write(returneddata.definitions[1].text);
-    document.write(returneddata.definitions[1].partOfSpeech);
-
-  });
-    // .done(function( data ) {
-    //   $.each( data.items, function( i, item ) {
-    //     $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-    //     if ( i === 3 ) {
-    //       return false;
-    //     }
-    //   });
-    // });
-})();
-</script>
+    <div id="divdefinput">
+    <input id="definput" type="textbox" value='type to search'>
+    <button id="buttonreq" ><span id = "mag" class="glyphicon glyphicon-search"></span></button>
+  </div>
 
 
+    <div id="deftotaldev">
 
+    <div id="containerdef">
+
+      <div id="innertitle"><p id= "WOTD"></p></div>
+      <div id="dictPronounce"></div>
+      <div id="tagdef1"></div>
+      <div id="prons"></div>
+      <div id="partspeech"></div>
+      <div id="defreturn"></div>
+      <div id="tagdef2"></div>
+      <div id="prons2"></div>
+      <div id="partspeech2"></div>
+      <div id="defreturn2"></div>
+      <div id="tagdef3"></div>
+      <div id="prons3"></div>
+      <div id="partspeech3"></div>
+      <div id="defreturn3"></div>
+      <audio id= "player" controls>
+        <source  id = "dictAudio" src="" type="audio/mp3">
+            Your browser does not support the audio element.
+      </audio>
+      <div id="aaa">
+
+      </div>
+    </div>
+    <div>
+    <span class="bottom">
+      <br>
+      <br>
+      <form id="back" action="index.html">
+        <input type="submit" value="a">
+      </form>
+    </span>
+
+  </div>
+
+    </div>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
