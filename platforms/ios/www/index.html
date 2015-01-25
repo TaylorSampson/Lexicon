@@ -45,18 +45,25 @@
           <p id= "WOTD"></p>
         </div>
         <div id="wotdPronounce"></div>
-        <div id="origin">origin:</div>
+        <div id="origin"></div>
         <div id="note"></div>
-        <div id="tag1">definition:</div>
+        <div id="tag1"></div>
         <div id="defpos"></div>
         <div id="def"></div>
-        <div id="tag2">definition:</div>
+        <div id="tag2"></div>
         <div id="defpos2"></div>
         <div id="def2"></div>
-        <div id="example">example:</div>
+        <div id="example"></div>
         <div id="ex"></div>
+        <audio id= "wotdplayer" controls>
+          <source  id = "wotdAudiofile" src="" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
         <form action="test.html">
           <input type="submit" value="a">
+        </form>
+        <form action="thesaurus.html">
+          <input type="submit" value="b">
         </form>
       </div>
       <span class="bottom">
@@ -64,31 +71,13 @@
           <br>
       </span>
     </div>
-      <script>
-      (function() {
-        var wotdAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
-        $.getJSON( wotdAPI, function(returneddata) {
-          var wotdActual = returneddata.word;
-          $('#WOTD').html(returneddata.word);
-          var pronounceAPI = "http://api.wordnik.com:80/v4/word.json/"+wotdActual+"/pronunciations?useCanonical=false&typeFormat=ahd&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
-          $('#note').append(returneddata.note);
-          $('#defpos').append(returneddata.definitions[0].partOfSpeech);
-          $('#def').append(returneddata.definitions[0].text);
-          $('#defpos2').append(returneddata.definitions[1].partOfSpeech);
-          $('#def2').append(returneddata.definitions[1].text);
-          $('#ex').append(returneddata.examples[0].text);
-          $.getJSON( pronounceAPI, function(pronouncedata){
-            $("#wotdPronounce").html(pronouncedata[0].raw);
-          });
-        });
-      })();
-      </script>
-
 
 
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/wotd.js"></script>
+
     </body>
 </html>

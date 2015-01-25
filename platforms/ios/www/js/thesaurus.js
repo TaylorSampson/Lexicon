@@ -4,13 +4,36 @@
 
 $("#thesbuttonreq").click(function() {
   $('#WOTD').html("");
-  $('#thespartspeech').html("");
-  $('#thesreturn').html( "");
+  $('#thes1').html("");
+  $('#thes2').html("");
+  $('#thes3').html("");
+  $('#thes4').html("");
+  $('#thes5').html("");
+  $('#thes6').html("");
+  $('#thes7').html("");
+  $('#thes8').html("");
+  $('#thes9').html("");
+  $('#thes10').html("");
+  $('#thesAnt1').html("");
+  $('#thesAnt2').html("");
+  $('#thesAnt3').html("");
+  $('#thesAnt4').html("");
+  $('#thesAnt5').html("");
   $("#tagthes1").html("");
-  $('#thespartspeech2').html("");
-  $('#thesreturn2').html( "");
   $("#tagthes2").html("");
-  $("#thesreturn").css({"border-bottom": "none"});
+  $('#thesRhm1').html("");
+  $('#thesRhm2').html("");
+  $('#thesRhm3').html("");
+  $('#thesRhm4').html("");
+  $('#thesRhm5').html("");
+  $('#thesRhm6').html("");
+  $('#thesRhm7').html("");
+  $('#thesRhm8').html("");
+  $('#thesRhm9').html("");
+  $('#thesRhm10').html("");
+
+  $("#synSec").css({"border-bottom": "none"});
+  $("#antSec").css({"border-bottom": "none"});
   $('#thespartspeech3').html("");
   $('#thesreturn3').html( "");
   $("#tagthes3").html("");
@@ -45,20 +68,31 @@ $.getJSON(thesAntAPIKey, function(thesAntData){
     $('#thesAnt2').append(thesAntData[0].words[1]);
     $('#thesAnt3').append(thesAntData[0].words[2]);
     $('#thesAnt4').append(thesAntData[0].words[3]);
-    $('#thesAnt5').append(thesAntData[0].words[4])
+    $('#thesAnt5').append(thesAntData[0].words[4]);
     $("#tagthes2").html("Antonyms:");
-
+    $("#antSec").css({"border-bottom":"1px solid #ffcaca"});
 
   });
-    $('#thespartspeech2').append(thesdata[1].partOfSpeech);
-    $('#thesreturn2').append(thesdata[1].text);
-    $("#tagthes2").html("definition:");
-    $("#thesreturn").css({"border-bottom": "1px dotted #e7e7e7"});
-    $('#thespartspeech3').append(thesdata[2].partOfSpeech);
-    $('#thesreturn3').append(thesdata[2].text);
-    $("#tagthes3").html("definition:");
-    $("#thesreturn2").css({"border-bottom": "1px dotted #e7e7e7"});
-    $("#containerthes").css({"visibility":"visible"});
+
+  var thesRhmAPIKey= "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=rhyme&limitPerRelationshipType=10&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
+$.getJSON(thesRhmAPIKey, function(thesRhmData){
+
+  $('#thesRhm1').append(thesRhmData[0].words[0]);
+  $('#thesRhm2').append(thesRhmData[0].words[1]);
+  $('#thesRhm3').append(thesRhmData[0].words[2]);
+  $('#thesRhm4').append(thesRhmData[0].words[3]);
+  $('#thesRhm5').append(thesRhmData[0].words[4]);
+  $('#thesRhm6').append(thesRhmData[0].words[5]);
+  $('#thesRhm7').append(thesRhmData[0].words[6]);
+  $('#thesRhm8').append(thesRhmData[0].words[7]);
+  $('#thesRhm9').append(thesRhmData[0].words[8]);
+  $('#thesRhm10').append(thesRhmData[0].words[9]);
+  $("#tagthes3").html("Rhyming Words:");
+
+    });
+
+
+
 
 
   });

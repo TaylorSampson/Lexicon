@@ -33,6 +33,11 @@ $(document).ready(function(){
     $("#defreturn2").css({"border-bottom": "none"});
     $("#containerdef").css({"visibility":"visible"});
     $("#dictPronounce").html("");
+    var audioplayer = document.getElementById('player')
+    audioplayer.src = "";
+
+
+
 
 
     var defreq = document.getElementById("definput").value;
@@ -43,6 +48,17 @@ $(document).ready(function(){
       $('#WOTD').html(defdata[0].word);
       $('#partspeech').append(defdata[0].partOfSpeech);
       $('#defreturn').append(defdata[0].text);
+      var defAudio = defdata[0].word;
+      var audioAPI = "http://api.wordnik.com:80/v4/word.json/"+defAudio+"/audio?useCanonical=false&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
+      $.getJSON(audioAPI, function(soundData){
+        var audio = document.getElementById('player');
+        audio.src = soundData[0].fileUrl;
+        audio.load();
+      });
+      var defActual = defdata[0].word;
+      var pronounceDefAPI = "http://api.wordnik.com:80/v4/word.json/"+defActual+"/pronunciations?useCanonical=false&typeFormat=ahd&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+      $.getJSON( pronounceDefAPI, function(pronounceDefdata){
+        $("#dictPronounce").html(pronounceDefdata[0].raw);
       $("#tagdef1").html("definition:");
       $('#partspeech2').append(defdata[1].partOfSpeech);
       $('#defreturn2').append(defdata[1].text);
@@ -53,18 +69,9 @@ $(document).ready(function(){
       $("#tagdef3").html("definition:");
       $("#defreturn2").css({"border-bottom": "1px dotted #e7e7e7"});
       $("#containerdef").css({"visibility":"visible"});
-      var defActual = defdata[0].word;
-      var pronounceDefAPI = "http://api.wordnik.com:80/v4/word.json/"+defActual+"/pronunciations?useCanonical=false&typeFormat=ahd&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
-      $.getJSON( pronounceDefAPI, function(pronounceDefdata){
-        $("#dictPronounce").html(pronounceDefdata[0].raw);
-      });
-      var defAudio = defdata[0].word;
-      var audioAPI = "http://api.wordnik.com:80/v4/word.json/"+defAudio+"/audio?useCanonical=false&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
-      $.getJSON(audioAPI, function(soundData){
-        var audio = document.getElementById('player');
-        audio.src = soundData[1].fileUrl;
-        audio.load();
+
 
       });
+
     });
   });

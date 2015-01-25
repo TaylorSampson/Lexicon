@@ -49,6 +49,9 @@
 /*Iphone 5*/
  @media screen and (device-aspect-ratio: 40/71){
 
+   #headcontainer{
+     height:90px;
+   }
 
    div#container{
      margin-top:38% !important;
@@ -349,7 +352,6 @@ margin-left: 7%;
 margin-right: 7%;
 padding-bottom: 4%;
 color:#656565;
-border-bottom: 1px solid #ffcaca;
 font-style:italic;
 }
 
@@ -373,7 +375,6 @@ font-style:italic;
   text-align:justify;
   margin-left: 7%;
   margin-right: 7%;
-  border-bottom: 1px dotted #e7e7e7;
   color:#656565;
   padding-bottom:4%;
   }
@@ -382,7 +383,6 @@ font-style:italic;
   text-align:justify;
   margin-left: 7%;
   margin-right: 7%;
-  border-bottom: 1px solid #ffcaca;
   color:#656565;
   padding-bottom:4%;
 }
@@ -506,7 +506,7 @@ font-size:20px;
 font-family:Raleway;
 bottom:0;
 margin-top:0%;
-float:left;
+margin-left:0;
 border-radius:none !important;
 }
 
@@ -643,7 +643,7 @@ float:right;}
       font-family:Raleway;
       bottom:0;
       margin-top:0%;
-      float:left;
+      margin-left:0;
       border-radius:none !important;
     }
 
@@ -688,7 +688,6 @@ float:right;}
     #tagthes1{
       text-transform:uppercase;
       font-size:12px;
-      padding-top:2%;
       padding-bottom:4%;
       color:#989898;
       text-align:center;
@@ -716,8 +715,11 @@ float:right;}
     #tagthes2{
       text-transform:uppercase;
       font-size:12px;
-      padding-top:5%;
+      padding-bottom:4%;
       color:#989898;
+      text-align:center;
+      padding-top:4%;
+
     }
 
 
@@ -736,15 +738,18 @@ float:right;}
       margin-left: 7%;
       margin-right: 7%;
       color:#656565;
-      padding-bottom:4%;
+      padding-top:4%;
     }
 
 
     #tagthes3{
       text-transform:uppercase;
       font-size:12px;
-      padding-top:5%;
+      padding-bottom:4%;
       color:#989898;
+      text-align:center;
+      padding-top:4%;
+
     }
 
 
@@ -770,5 +775,29 @@ float:right;}
       text-align: center;
       margin-left:10%;
       margin-right:10%;
-      padding-bottom:2%;
+      padding-bottom:5%;
+    }
+
+    #antSec{
+      text-align: center;
+      margin-left:10%;
+      margin-right:10%;
+      padding-bottom:5%;
+    }
+
+    #rhmSec{
+      text-align: center;
+      margin-left:10%;
+      margin-right:10%;
+      padding-bottom:8%;
+    }
+
+    #wotdplayer{
+      background-color:#ff5454;
+      color:#ff5454;
+    }
+
+    #wotdaudiofile{
+      background-color:#ff5454;
+      color:#ff5454;
     }
