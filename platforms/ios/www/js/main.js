@@ -32,6 +32,8 @@ $(document).ready(function(){
     $("#tagdef3").html("");
     $("#defreturn2").css({"border-bottom": "none"});
     $("#containerdef").css({"visibility":"visible"});
+    $("#dictPronounce").html("");
+
 
     var defreq = document.getElementById("definput").value;
     var defreq = defreq.toLowerCase();
@@ -51,5 +53,18 @@ $(document).ready(function(){
       $("#tagdef3").html("definition:");
       $("#defreturn2").css({"border-bottom": "1px dotted #e7e7e7"});
       $("#containerdef").css({"visibility":"visible"});
+      var defActual = defdata[0].word;
+      var pronounceDefAPI = "http://api.wordnik.com:80/v4/word.json/"+defActual+"/pronunciations?useCanonical=false&typeFormat=ahd&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+      $.getJSON( pronounceDefAPI, function(pronounceDefdata){
+        $("#dictPronounce").html(pronounceDefdata[0].raw);
+      });
+      var defAudio = defdata[0].word;
+      var audioAPI = "http://api.wordnik.com:80/v4/word.json/"+defAudio+"/audio?useCanonical=false&limit=50&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
+      $.getJSON(audioAPI, function(soundData){
+        var audio = document.getElementById('player');
+        audio.src = soundData[1].fileUrl;
+        audio.load();
+
+      });
     });
   });
