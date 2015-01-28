@@ -1,24 +1,26 @@
-$(document).ready(function(){
-  // var color = Math.floor((Math.random() * 3) + 1);
-  $("#title").animate({opacity:'1'}, 'slow');
-  // if(color == 1){
-  //   $("#headcontainer").css({"background-color":"#2F8FCC"});
-  // }
-  // else if(color ==2){
-  //   $("#headcontainer").css({"background-color":"#54FF84"});
-  // }
-  // else{
-  //   $("#headcontainer").css({"background-color":"#ff5454"});
-  // }
-  // $.get("http://api.wordnik.com/v4/words.json/wordOfTheDay", function(data){
-  //   $(".result").html(data);
-  //   alert("Load Was Performed");
 
+
+$(document).ready(function(){
+  $("#title").animate({opacity:'1'}, 'slow');
+  function txtFocusFunction(){
+    document.getElementById("definput").value = "";
+  }
+  var defSearch = document.getElementById("definput");
+  var btnSearch = document.getElementById("buttonreq");
+  var DLI = document.getElementById("defLabelInput");
+
+  DLI.addEventListener('touchstart', txtFocusFunction, false);
+  defSearch.addEventListener('touchstart', searchDef, false);
+  defSearch.addEventListener('focus', txtFocusFunction, false);
   });
 
 
 
-  $("#buttonreq").click(function() {
+
+
+
+
+  $("#buttonreq").click(function searchDef() {
     $('#WOTD').html("");
     $('#partspeech').html("");
     $('#defreturn').html( "");
@@ -33,6 +35,10 @@ $(document).ready(function(){
     $("#defreturn2").css({"border-bottom": "none"});
     $("#containerdef").css({"visibility":"visible"});
     $("#dictPronounce").html("");
+    $("#prons").html("");
+    $("#prons2").html("");
+    $("#prons3").html("");
+
     var audioplayer = document.getElementById('player')
     audioplayer.src = "";
 

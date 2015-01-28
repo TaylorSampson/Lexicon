@@ -85,6 +85,15 @@
      margin-top:30% !important;
    }
 
+   #divthesinput{
+     margin-top:30% !important;
+   }
+
+   #navtitlewotd{
+     font-size:20px;
+     margin-top:30%;
+
+   }
 
  }
 
@@ -193,7 +202,7 @@
    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-   background-color:#f0f0f0;
+   background-color:#f7f7f7;
    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
    font-size:12px;
    height:100%;
@@ -280,7 +289,7 @@ p{
 
 /*TOTAL PAGE CSS*/
 #page-container{
-  background-color:#f0f0f0;
+  background-color:#f7f7f7;
 }
 
 
@@ -431,12 +440,12 @@ font-style:italic;
 }
 
 html {
-  background-color:#f0f0f0;
+  background-color:#f7f7f7;
 }
 
 .bottom{
   height:40px !important;
-  background-color:#f0f0f0;
+  background-color:#f7f7f7;
 }
 
 
@@ -589,7 +598,7 @@ color:#989898;
 }
 
 #deftotaldev{
-  background-color:#f0f0f0;
+  background-color:#f7f7f7;
 }
 
 #buttonreq{
@@ -662,7 +671,7 @@ float:right;}
 
 
     #thestotaldev{
-      background-color:#f0f0f0;
+      background-color:#f7f7f7;
 
     }
 
@@ -792,12 +801,14 @@ float:right;}
       padding-bottom:8%;
     }
 
-    #wotdplayer{
-      background-color:#ff5454;
-      color:#ff5454;
-    }
+/*NAVS*/
+#navtitlewotd{
+  text-align:center;
+  background-color:#82dd9f;
+  color:#ffffff;
+  font-family:Raleway;
+}
 
-    #wotdaudiofile{
-      background-color:#ff5454;
-      color:#ff5454;
-    }
+.wotdBody, #wotdBodyID, .dictBody, #dictBodyID{
+  height:100%;
+}

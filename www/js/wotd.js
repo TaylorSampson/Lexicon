@@ -1,3 +1,4 @@
+
     (function() {
         var wotdAPI = "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
         $.getJSON( wotdAPI, function(returneddata) {

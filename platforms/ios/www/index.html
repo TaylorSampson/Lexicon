@@ -28,10 +28,13 @@
         <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/swipe.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
 
         </head>
-    <body>
+    <body class="wotdBody">
+      <div id="wotdBodyID">
 
       <div id="page-container">
         <nav class="navbar navbar-default navbar-fixed-top" id="headcontainer">
@@ -39,7 +42,9 @@
             <h1 id="title">Lexicon</h1>
           </div>
         </nav>
-
+        <!-- <div id="navtitlewotd">
+          Word Of The Day
+        </div> -->
       <div id="container">
         <div id="innertitle">
           <p id= "WOTD"></p>
@@ -59,12 +64,8 @@
           <source  id = "wotdAudiofile" src="" type="audio/mp3">
             Your browser does not support the audio element.
           </audio>
-        <form action="test.html">
-          <input type="submit" value="a">
-        </form>
-        <form action="thesaurus.html">
-          <input type="submit" value="b">
-        </form>
+    
+
       </div>
       <span class="bottom">
           <br>
@@ -78,6 +79,6 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/wotd.js"></script>
-
+      </div>
     </body>
 </html>

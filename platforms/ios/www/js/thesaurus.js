@@ -1,8 +1,24 @@
+$(document).ready(function(){
+  function txtFocusFunction(){
+    document.getElementById("thesinput").value = "";
+  }
+  var thesSearch = document.getElementById("thesinput");
+  var thesBtn = document.getElementById("thesbtnreq");
+  var TLI = document.getElementById("thesLabelInput");
+
+  TLI.addEventListener('touchstart', txtFocusFunction, false);
+  thesBtn.addEventListener('touchstart', thesSearch , false);
+  thesSearch.addEventListener('focus', txtFocusFunction, false);
+});
+
+
+
+
 // $("#thesinput").focus(function(){
 //   $("#thesinput").placeholder="";
 // });
 
-$("#thesbuttonreq").click(function() {
+$("#thesbuttonreq").click(function thesSearch() {
   $('#WOTD').html("");
   $('#thes1').html("");
   $('#thes2').html("");

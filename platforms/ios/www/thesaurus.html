@@ -27,10 +27,14 @@ under the License.
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
+  <script type="text/javascript" src="js/swipe.js"></script>
+  <script type="text/javascript" src="js/focus.js"></script>
+
 
 </head>
-<body>
-
+<body class="thesBody">
+<div id="thesBodyID">
   <div id="page-container">
     <nav class="navbar navbar-default navbar-fixed-top navbar-def" id="headcontainer">
       <div id="maintitledef">
@@ -39,7 +43,9 @@ under the License.
     </nav>
 
     <div id="divthesinput">
-      <input id="thesinput" type="textbox" placeholder='Start typing to search!'>
+      <lbl id="thesLabelInput">
+        <input id="thesinput" type="textbox" placeholder='Start typing to search!'>
+      </lbl>
       <button id="thesbuttonreq" ><span id = "mag" class="glyphicon glyphicon-search"></span></button>
     </div>
 
@@ -52,16 +58,16 @@ under the License.
         <div id="thesreturn"></div>
           <div id="synSec">
           <div id="tagthes1">Synonyms:</div>
-          <div id="thes1"></div>
-          <div id="thes2"></div>
-          <div id="thes3"></div>
-          <div id="thes4"></div>
-          <div id="thes5"></div>
-          <div id="thes6"></div>
-          <div id="thes7"></div>
-          <div id="thes8"></div>
-          <div id="thes9"></div>
-          <div id="thes10"></div>
+          <div id="thes1">a</div>
+          <div id="thes2">a</div>
+          <div id="thes3">a</div>
+          <div id="thes4">a</div>
+          <div id="thes5">a</div>
+          <div id="thes6">a</div>
+          <div id="thes7">a</div>
+          <div id="thes8">a</div>
+          <div id="thes9">a</div>
+          <div id="thes10">a</div>
         </div>
 
         <div id="antSec">
@@ -96,9 +102,6 @@ under the License.
           <sdivan class="bottom">
             <br>
             <br>
-            <form id="back" action="index.html">
-              <input type="submit" value="a">
-            </form>
           </span>
 
         </div>
@@ -108,5 +111,6 @@ under the License.
       <script type="text/javascript" src="cordova.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript" src="js/thesaurus.js"></script>
+    </div>
     </body>
     </html>

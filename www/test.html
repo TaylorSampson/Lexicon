@@ -27,9 +27,14 @@ under the License.
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
+  <script type="text/javascript" src="js/swipe.js"></script>
+  <script type="text/javascript" src="js/focus.js"></script>
+
 
 </head>
-<body>
+<body class="dictBody">
+  <div id="dictBodyID">
 
   <div id="page-container">
     <nav class="navbar navbar-default navbar-fixed-top navbar-def" id="headcontainer">
@@ -39,29 +44,30 @@ under the License.
     </nav>
 
     <div id="divdefinput">
-    <input id="definput" type="textbox" placehlder='Start typing to search!'>
+      <lbl id = "defLabelInput">
+        <input id="definput" type="textbox" placeholder='Start typing to search!'>
+      </lbl>
     <button id="buttonreq" ><span id = "mag" class="glyphicon glyphicon-search"></span></button>
   </div>
 
 
     <div id="deftotaldev">
-
     <div id="containerdef">
 
       <div id="innertitle"><p id= "WOTD"></p></div>
-      <div id="dictPronounce"></div>
-      <div id="tagdef1"></div>
-      <div id="prons"></div>
-      <div id="partspeech"></div>
-      <div id="defreturn"></div>
-      <div id="tagdef2"></div>
-      <div id="prons2"></div>
-      <div id="partspeech2"></div>
-      <div id="defreturn2"></div>
-      <div id="tagdef3"></div>
-      <div id="prons3"></div>
-      <div id="partspeech3"></div>
-      <div id="defreturn3"></div>
+      <div id="dictPronounce">a</div>
+      <div id="tagdef1">a</div>
+      <div id="prons">a</div>
+      <div id="partspeech">a</div>
+      <div id="defreturn">a</div>
+      <div id="tagdef2">a</div>
+      <div id="prons2">a</div>
+      <div id="partspeech2">a</div>
+      <div id="defreturn2">a</div>
+      <div id="tagdef3">a</div>
+      <div id="prons3">a</div>
+      <div id="partspeech3">a</div>
+      <div id="defreturn3">a</div>
       <audio id= "player" controls>
         <source  id = "dictAudio" src="" type="audio/mp3">
             Your browser does not support the audio element.
@@ -74,17 +80,15 @@ under the License.
     <span class="bottom">
       <br>
       <br>
-      <form id="back" action="index.html">
-        <input type="submit" value="a">
-      </form>
     </span>
 
   </div>
 
     </div>
-
+  <script type="text/javascript" src="js/slidr.js"></script>  
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+</div>
 </body>
 </html>
