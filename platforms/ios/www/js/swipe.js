@@ -61,6 +61,6 @@ $(function() {
       window.location.replace("test.html");
     },
     threshold:30
-    
+
   });
 });

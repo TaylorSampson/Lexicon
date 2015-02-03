@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $("#titlethes").animate({opacity:'1'}, 'slow');
+  $("#maintitledef").animate({opacity:'1'}, 1000);
+  $("#divthesinput").animate({opacity:'1'}, 1000);
   function txtFocusFunction(){
     document.getElementById("thesinput").value = "";
   }
@@ -61,7 +64,7 @@ $("#thesbuttonreq").click(function thesSearch() {
 
   var thesreq = document.getElementById("thesinput").value;
   var thesreq = thesreq.toLowerCase();
-  var thesapiKey= "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+  var thesapiKey= "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=20&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
   $.getJSON( thesapiKey, function(thesdata) {
     $('#WOTD').html(document.getElementById("thesinput").value);
     $('#thes1').append(thesdata[0].words[0]);
@@ -78,7 +81,7 @@ $("#thesbuttonreq").click(function thesSearch() {
     $("#synSec").css({"border-bottom":"1px solid #ffcaca"});
 
 
-  var thesAntAPIKey = "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=antonym&limitPerRelationshipType=10&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
+  var thesAntAPIKey = "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=antonym&limitPerRelationshipType=20&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0";
 $.getJSON(thesAntAPIKey, function(thesAntData){
     $('#thesAnt1').append(thesAntData[0].words[0]);
     $('#thesAnt2').append(thesAntData[0].words[1]);
@@ -90,7 +93,7 @@ $.getJSON(thesAntAPIKey, function(thesAntData){
 
   });
 
-  var thesRhmAPIKey= "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=rhyme&limitPerRelationshipType=10&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
+  var thesRhmAPIKey= "http://api.wordnik.com:80/v4/word.json/"+thesreq+"/relatedWords?useCanonical=false&relationshipTypes=rhyme&limitPerRelationshipType=20&api_key=18dac42cc58520dbc60050b320b09a6b37c83226914b21ce0"
 $.getJSON(thesRhmAPIKey, function(thesRhmData){
 
   $('#thesRhm1').append(thesRhmData[0].words[0]);
@@ -103,6 +106,16 @@ $.getJSON(thesRhmAPIKey, function(thesRhmData){
   $('#thesRhm8').append(thesRhmData[0].words[7]);
   $('#thesRhm9').append(thesRhmData[0].words[8]);
   $('#thesRhm10').append(thesRhmData[0].words[9]);
+  $('#thesRhm11').append(thesRhmData[0].words[10]);
+  $('#thesRhm12').append(thesRhmData[0].words[11]);
+  $('#thesRhm13').append(thesRhmData[0].words[12]);
+  $('#thesRhm14').append(thesRhmData[0].words[13]);
+  $('#thesRhm15').append(thesRhmData[0].words[14]);
+  $('#thesRhm16').append(thesRhmData[0].words[15]);
+  $('#thesRhm17').append(thesRhmData[0].words[16]);
+  $('#thesRhm18').append(thesRhmData[0].words[17]);
+  $('#thesRhm19').append(thesRhmData[0].words[18]);
+  $('#thesRhm20').append(thesRhmData[0].words[19]);
   $("#tagthes3").html("Rhyming Words:");
 
     });

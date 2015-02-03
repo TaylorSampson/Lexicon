@@ -28,9 +28,18 @@
 
      /* Styles */
 
+     #subtitle{
+       margin-top:15%;
+
+     }
+
+     #subtitledef, #subtitlethes{
+       margin-top:13%;
+
+     }
 
      div#container{
-       margin-top:35%;
+       margin-top:38%;
      }
 
      #headcontainer{
@@ -44,10 +53,28 @@
      h1#titledef{
        padding-top:4%;
      }
+
+     #divdefinput{
+       margin-top: 110px !important;
+     }
+
+     #divthesinput{
+       margin-top:110px !important;
+     }
  }
 
 /*Iphone 5*/
  @media screen and (device-aspect-ratio: 40/71){
+
+   #subtitle{
+     margin-top:36px;
+
+   }
+
+   #subtitledef, #subtitlethes{
+     margin-top:36px;
+
+   }
 
    #headcontainer{
      height:90px;
@@ -62,7 +89,11 @@
    }
 
    #divdefinput{
-     margin-top: 28% !important;
+     margin-top: 110px !important;
+   }
+
+   #divthesinput{
+     margin-top:110px !important;
    }
 
    h1#titledef{
@@ -81,12 +112,62 @@
      margin-top:6%;
    }
 
+   div#container{
+     margin-top:38%;
+   }
+
+   #subtitle{
+     margin-top:51px;
+
+   }
+
+   #subtitledef, #subtitlethes{
+     margin-top:51px;
+
+   }
+
    #divdefinput{
-     margin-top:30% !important;
+     margin-top:133px !important;
    }
 
    #divthesinput{
-     margin-top:30% !important;
+     margin-top:133px !important;
+   }
+
+   #navtitlewotd{
+     font-size:20px;
+     margin-top:30%;
+
+   }
+
+ }
+
+
+ @media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3){
+   div nav h1 {
+     font-size: 47px;
+     margin-top:6%;
+   }
+
+   div#container{
+     margin-top:38%;
+   }
+
+   #subtitle{
+     margin-top:62px;
+
+   }
+   #subtitledef, #subtitlethes{
+     margin-top:62px;
+
+   }
+
+   #divdefinput{
+     margin-top:145px !important;
+   }
+
+   #divthesinput{
+     margin-top:145px !important;
    }
 
    #navtitlewotd{
@@ -111,6 +192,11 @@
 
    #divdefinput{
      margin-top:14% !important;
+   }
+
+   #subtitle{
+     margin-top:15%;
+
    }
 
 
@@ -199,6 +285,7 @@
 
 /*START OF PAGE CSS*/
  body {
+
    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -215,6 +302,11 @@ p{
   width: 100%;
   text-align:center;
   margin:auto;
+}
+
+input{
+  border-radius:0px !important;
+
 }
  /* Landscape layout (with min-width) */
  @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -289,7 +381,9 @@ p{
 
 /*TOTAL PAGE CSS*/
 #page-container{
+  background-image: url("../img/bluegeo.png");
   background-color:#f7f7f7;
+
 }
 
 
@@ -343,14 +437,14 @@ p{
   font-family:Raleway;
   font-size:20px;
   color:#ffffff;
-  padding-top:3%;
+  padding-top:5%;
   text-transform:lowercase;
 }
 
 
 
 
-#title, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
+#title, #titledef, #titlethes, #container, #maintitle, #maintitledef, #divdefinput, #divthesinput, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
   opacity:0;
 }
 
@@ -440,12 +534,16 @@ font-style:italic;
 }
 
 html {
+  background-image: url("../img/bluegeo.png");
   background-color:#f7f7f7;
+
 }
 
 .bottom{
   height:40px !important;
-  background-color:#f7f7f7;
+  /*background-color:#f7f7f7;
+  background-image: url("../img/bluegeo.png");*/
+
 }
 
 
@@ -494,6 +592,17 @@ html {
 
 }
 
+
+#titlethes{
+  font-family:Raleway;
+  color: #ffffff;
+  padding-top:2%;
+  margin-bottom:-5%;
+  text-align: center;
+  text-transform: lowercase;
+  /*text-shadow: -2px 2px 1px #656565;*/
+
+}
 #maintitledef{
 
 }
@@ -597,9 +706,11 @@ color:#989898;
   margin-bottom:10%;
 }
 
-#deftotaldev{
+/*#deftotaldev{
+  background-image: url("../img/bluegeo.png");
   background-color:#f7f7f7;
-}
+
+}*/
 
 #buttonreq{
 width:20%;
@@ -671,7 +782,8 @@ float:right;}
 
 
     #thestotaldev{
-      background-color:#f7f7f7;
+      /*background-image: url("../img/bluegeo.png");*/
+      /*background-color:#f7f7f7;*/
 
     }
 
@@ -811,4 +923,13 @@ float:right;}
 
 .wotdBody, #wotdBodyID, .dictBody, #dictBodyID{
   height:100%;
+}
+
+#subtitle, #subtitledef, #subtitlethes{
+  text-align:center;
+  background-color:#eb2d2d;
+  opacity:.7;
+  color:white;
+  text-transform:uppercase;
+  font-family:Raleway;
 }

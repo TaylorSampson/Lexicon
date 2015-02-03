@@ -2,6 +2,12 @@
 
 $(document).ready(function(){
   $("#title").animate({opacity:'1'}, 'slow');
+  $("#titledef").animate({opacity:'1'}, 'slow');
+  $("#maintitledef").animate({opacity:'1'}, 1000);
+  $("#divdefinput").animate({opacity:'1'}, 1000);
+  $("#container").animate({opacity:'1'}, 1000);
+  $("#maintitle").animate({opacity:'1'},1000);
+
   function txtFocusFunction(){
     document.getElementById("definput").value = "";
   }
