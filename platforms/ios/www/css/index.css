@@ -33,9 +33,13 @@
 
      }
 
-     #subtitledef, #subtitlethes{
+     #subtitledef{
        margin-top:13%;
 
+     }
+
+     #subtitlethes{
+       margin-top:15%;
      }
 
      div#container{
@@ -444,7 +448,7 @@ input{
 
 
 
-#title, #titledef, #titlethes, #container, #maintitle, #maintitledef, #divdefinput, #divthesinput, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
+#title, #titledef, #titlethes, #container, #maintitle, #maintitledef, #wotdBody, #thesBody, #dictBody, #divdefinput, #divthesinput, #s1, #s2, #s3, #s4, #s5, #s6, #s7{
   opacity:0;
 }
 

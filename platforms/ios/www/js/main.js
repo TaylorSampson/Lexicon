@@ -5,8 +5,11 @@ $(document).ready(function(){
   $("#titledef").animate({opacity:'1'}, 'slow');
   $("#maintitledef").animate({opacity:'1'}, 1000);
   $("#divdefinput").animate({opacity:'1'}, 1000);
-  $("#container").animate({opacity:'1'}, 1000);
+  $("#container").animate({opacity:'1'}, 2000);
   $("#maintitle").animate({opacity:'1'},1000);
+  $("#wotdBody").animate({opacity:'1'},1000);
+  $("#dictBody").animate({opacity:'1'},1000);
+
 
   function txtFocusFunction(){
     document.getElementById("definput").value = "";

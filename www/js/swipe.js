@@ -5,7 +5,6 @@ $(function() {
     swipeLeft:function(event, left, distance, duration, fingerCount, fingerData) {
       window.location.replace("test.html");
     },
-    threshold:30
   });
 });
 
@@ -15,7 +14,6 @@ $(function() {
     swipeRight:function(event, left, distance, duration, fingerCount, fingerData) {
       window.location.replace("thesaurus.html");
     },
-    threshold:30
 
   });
 });
@@ -27,7 +25,6 @@ $(function() {
     swipeLeft:function(event, left, distance, duration, fingerCount, fingerData) {
       window.location.replace("thesaurus.html");
     },
-    threshold:30
 
   });
 });
@@ -38,7 +35,6 @@ $(function() {
     swipeRight:function(event, right, distance, duration, fingerCount, fingerData) {
       window.location.replace("index.html");
     },
-    threshold:30
 
   });
 });
@@ -49,7 +45,6 @@ $(function() {
     swipeLeft:function(event, left, distance, duration, fingerCount, fingerData) {
       window.location.replace("index.html");
     },
-    threshold:30
 
   });
 });
@@ -60,7 +55,6 @@ $(function() {
     swipeRight:function(event, right, distance, duration, fingerCount, fingerData) {
       window.location.replace("test.html");
     },
-    threshold:30
 
   });
 });

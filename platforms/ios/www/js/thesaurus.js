@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $("#titlethes").animate({opacity:'1'}, 'slow');
   $("#maintitledef").animate({opacity:'1'}, 1000);
+  $("#thesBody").animate({opacity:'1'}, 1000);
   $("#divthesinput").animate({opacity:'1'}, 1000);
   function txtFocusFunction(){
     document.getElementById("thesinput").value = "";
